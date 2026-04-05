@@ -4,23 +4,12 @@ services:
     name: alphapulse-dashboard
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    pythonVersion: 3.11.9
+    buildCommand: |
+      python --version
+      pip install --upgrade pip
+      pip install -r requirements.txt
     startCommand: streamlit run dashboard/app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless true
-    envVars:
-      - key: BINANCE_API_KEY
-        sync: false
-      - key: BINANCE_API_SECRET
-        sync: false
-      - key: PYTHON_VERSION
-        value: 3.11.0
-    
-  # Background Worker for Signal Generation (Optional)
-  - type: worker
-    name: alphapulse-worker
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: python -c "while true; do python cli.py signal --symbol BTCUSDT --interval 1h --lookback 500; sleep 3600; done"
     envVars:
       - key: BINANCE_API_KEY
         sync: false
