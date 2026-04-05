@@ -1,0 +1,15 @@
+# Ignore files for Render deployment
+.git/
+.gitignore
+.env
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+data/models/*.joblib
+logs/trading.log
+.DS_Store
+tests/
+screenshots/
