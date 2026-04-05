@@ -194,7 +194,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ```bash
 # Clone and setup
-git clone https://github.com/yourusername/alphapulse.git
+git clone https://github.com/So-coder-ai/alphapulse.git
 cd alphapulse
 pip install -r requirements.txt
 
