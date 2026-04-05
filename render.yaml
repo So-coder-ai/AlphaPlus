@@ -1,21 +1,20 @@
 services:
-  # Streamlit Dashboard
   - type: web
     name: alphapulse-dashboard
     env: python
     plan: free
 
-    runtime: python-3.11.9 
-    
+    runtime: python-3.11.9   
+
     buildCommand: |
       python --version
       pip install --upgrade pip
       pip install -r requirements.txt
+
     startCommand: streamlit run dashboard/app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless true
+
     envVars:
       - key: BINANCE_API_KEY
         sync: false
       - key: BINANCE_API_SECRET
         sync: false
-      - key: PYTHON_VERSION
-        value: 3.11.9
