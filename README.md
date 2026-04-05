@@ -174,7 +174,7 @@ pytest tests/ -v --cov=.
 
 ## � Author
 
-Built by **[Your Name]** | [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+Built by **[So-coder-ai]** | [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
 
 ---
 
