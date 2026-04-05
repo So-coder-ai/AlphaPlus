@@ -4,7 +4,6 @@ services:
     name: alphapulse-dashboard
     env: python
     plan: free
-    pythonVersion: 3.11.9
     buildCommand: |
       python --version
       pip install --upgrade pip
@@ -15,3 +14,5 @@ services:
         sync: false
       - key: BINANCE_API_SECRET
         sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.9
